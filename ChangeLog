@@ -1,0 +1,45 @@
+2007-01-06  Daniel Hipschman  <dsh@linux.ucla.edu>
+
+	* lexer.mll: Add code to catch SIGINT and stack overflows.  Allow
+	comments at the end of a file that doesn't end with a newline.
+	Added HELP token, new function help, and implementation of Help
+	using it in runkb.  Added banner when program is started.
+	* parser.mly, types.ml: Add standard HELP and Help related code.
+	* milog-1.1b: Christen it, tag it beta_1_1, release it.
+
+2007-01-05  Daniel Hipschman  <dsh@linux.ucla.edu>
+
+	* lexer.mll: Added FORGET token.  New function forget.  Implement
+	Forget request in runkb using forget.
+	* parser.mly: Add token FORGET and parse rule using it.
+	* types.ml: Add Forget constructor to request type.
+
+2007-01-04  Daniel Hipschman  <dsh@linux.ucla.edu>
+
+	* lexer.mll: Add lexbuf position updating for better parse error
+	messages.  Pass lexbuf to runkb and loadkb, fixes bug when parsing
+	from a file (so Load works).
+	* types.ml: New file.
+	* parser.mly: Moved everything from the header into types.ml.
+	* milog: Can now compile to byte-code or native executable.
+
+2007-01-02  Daniel Hipschman  <dsh@linux.ucla.edu>
+
+	* lexer.mll: Added STRING, DUMP, SAVE, LOAD tokens.  New function
+	loadkb.  New functions error and parse_err, used in runkb and
+	loadkb.  Implemented Dump, Save, and Load (not working) requests
+	in runkb.
+	* parser.mly: Added Dump, Save and Load requests.  Rename all the
+	print_* functions to output_* and give the an input channel as an
+	argument.  New function output_kb used by runkb.  Added parser
+	tokens and rules for DUMP, SAVE, and LOAD.
+
+2007-01-01  Daniel Hipschman  <dsh@linux.ucla.edu>
+
+	* lexer.mll: Remove FAIL token, smart_names flag, and lookup.
+	* parser.mly: Combine %token decls, fold list grammar rule into
+	aterm, remove FAIL rule.
+	* COPYING: Added.
+	* examples.pl: Some attempt at documentation.
+	* milog-1.0.1b: Tagged beta1_0_1, re-released.
+

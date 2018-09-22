@@ -1,0 +1,6 @@
+
+SOURCES = types.ml parser.mly lexer.mll
+RESULT = milog
+
+include /usr/share/ocaml-tools/OCamlMakefile
+

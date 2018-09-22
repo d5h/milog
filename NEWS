@@ -1,0 +1,18 @@
+
+        Milog 1.1 (Beta)
+        - Catches SIGINT and stack overflows
+        - #dump directive displays knowledge base (KB)
+        - #save "filename" directive saves KB to filename
+        - #load "filename" directive adds KB from filename
+        - #forget directive to remove KB rules
+        - #help directive for help about directives 
+        - Better error messages
+        - Improved lexer / parser
+        - Compiles to byte-code or native executable
+
+        Milog 1.0.1 (Beta)
+        - Code cleanup
+        - Added examples.pl for documentation
+
+        Milog 1.0 (Beta)
+        - Initial release
